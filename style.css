@@ -1,89 +1,60 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #e0e0e0;
     margin: 0;
     padding: 0;
-    text-align: center;
-}
-
-.header {
-    background-color: #333;
-    color: white;
-    padding: 10px;
 }
 
 .container {
-    width: 90%;
-    margin: 15px auto;
-    background-color: #d0d0d0;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column; /* 기본값은 세로 방향 */
-}
-
-.sidebar, .work-item, .education-item {
-    background-color: #f0f0f0;
-    padding: 15px;
-    margin-bottom: 15px;
-    border: 1px solid #333;
-}
-
-.sidebar h3, .work-item h3, .education-item h3 {
-    margin-top: 0;
-}
-
-.sidebar a {
-    display: block;
-    color: #000;
-    text-decoration: underline;
-    margin-bottom: 8px;
-}
-
-.sidebar a:visited {
-    color: purple;
-    text-decoration: underline;
-}
-
-.footer {
-    background-color: #555;
-    color: white;
-    padding: 10px 0;
     width: 100%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #333;
+    color: white;
     text-align: center;
+    padding: 1rem 0;
 }
 
-.content h2 {
-    border-bottom: 1px solid #333;
-    padding-bottom: 5px;
+nav {
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 1rem 0;
 }
 
-/* PC 화면에서는 가로 방향으로 표시 */
-@media only screen and (min-width: 576px) {
-    .container {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-    .content {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-    }
-    .sidebar {
-        width: 30%;
-    }
-    .work-item, .education-item {
-        width: 30%;
-    }
+nav a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: purple;
 }
 
-/* 모바일 화면에서는 세로 방향으로 표시 */
+section {
+    padding: 2rem;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
 @media only screen and (max-width: 575px) {
-    .container {
-        flex-direction: column;
+    nav a {
+        display: block;
+        margin: 1rem 0;
     }
-    .sidebar, .work-item, .education-item {
-        width: 100%;
+
+    section, nav {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    footer {
+        position: relative;
     }
 }
