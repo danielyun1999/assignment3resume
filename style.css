@@ -9,28 +9,37 @@ body {
 .header {
     background-color: #333;
     color: white;
-    padding: 10px; 
+    padding: 10px;
 }
 
 .container {
-    width: 90%; 
-    margin: 15px auto; 
+    width: 90%;
+    margin: 15px auto;
     background-color: #d0d0d0;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    display: flex;
-    flex-wrap: wrap;
 }
 
-.sidebar {
-    width: 25%; 
-    background-color: #b0b0b0; 
-    padding: 15px; 
-    box-sizing: border-box;
+.content {
+    padding: 15px;
+    background-color: white;
     text-align: left;
+    margin-bottom: 15px;
 }
 
-.sidebar h3 {
+.content h2 {
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+}
+
+.sidebar, .work-item, .education-item {
+    background-color: #f0f0f0;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #333;
+}
+
+.sidebar h3, .work-item h3, .education-item h3 {
     margin-top: 0;
 }
 
@@ -38,7 +47,7 @@ body {
     display: block;
     color: #000;
     text-decoration: underline;
-    margin-bottom: 8px; 
+    margin-bottom: 8px;
 }
 
 .sidebar a:visited {
@@ -46,60 +55,21 @@ body {
     text-decoration: underline;
 }
 
-.content {
-    width: 70%; 
-    padding: 15px; 
-    box-sizing: border-box;
-    background-color: white;
-    text-align: left;
-}
-
-.content h2 {
-    border-bottom: 1px solid #333; 
-    padding-bottom: 5px;
-}
-
-.work-experience, 
-.education-experience {
-    display: block;
-}
-
-.work-item, 
-.education-item {
-    width: 100%;
-    background-color: #f0f0f0;
-    padding: 10px;
-    box-sizing: border-box;
-    margin-bottom: 10px;
-    border: 1px solid #333;
-}
-
 .footer {
-    background-color: #555; /* Lighter color */
+    background-color: #555;
     color: white;
     padding: 10px 0;
-    position: relative;
-    bottom: 0;
     width: 100%;
     text-align: center;
 }
 
 /* Media Queries for Mobile Responsiveness */
 @media only screen and (max-width: 575px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .sidebar, .content {
-        width: 90%;
+    .content {
+        width: 100%;
         margin: 0 auto;
     }
-
-    .sidebar {
-        margin-bottom: 15px;
-    }
-
-    .work-item, .education-item {
+    .sidebar, .work-item, .education-item {
         width: 100%;
     }
 }
