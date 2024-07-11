@@ -18,18 +18,8 @@ body {
     background-color: #d0d0d0;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-}
-
-.content {
-    padding: 15px;
-    background-color: white;
-    text-align: left;
-    margin-bottom: 15px;
-}
-
-.content h2 {
-    border-bottom: 1px solid #333;
-    padding-bottom: 5px;
+    display: flex;
+    flex-direction: column; /* 기본값은 세로 방향 */
 }
 
 .sidebar, .work-item, .education-item {
@@ -63,11 +53,35 @@ body {
     text-align: center;
 }
 
-/* Media Queries for Mobile Responsiveness */
-@media only screen and (max-width: 575px) {
+.content h2 {
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+}
+
+/* PC 화면에서는 가로 방향으로 표시 */
+@media only screen and (min-width: 576px) {
+    .container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
     .content {
         width: 100%;
-        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .sidebar {
+        width: 30%;
+    }
+    .work-item, .education-item {
+        width: 30%;
+    }
+}
+
+/* 모바일 화면에서는 세로 방향으로 표시 */
+@media only screen and (max-width: 575px) {
+    .container {
+        flex-direction: column;
     }
     .sidebar, .work-item, .education-item {
         width: 100%;
